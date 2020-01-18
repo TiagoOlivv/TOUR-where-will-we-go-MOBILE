@@ -169,16 +169,10 @@ export default ({ navigation }) => {
 							}}
 						>
 							<View style={styles.callout}>
-								<Text style={styles.localName}>
-									{local.full_name}
-								</Text>
-								<Text style={styles.all}>
-									{local.biography}
-								</Text>
+								<Text style={styles.localName}>{local.full_name}</Text>
+								<Text style={styles.all}>{local.biography}</Text>
 								<Text style={styles.all}>{local.acting}</Text>
-								<Text style={styles.all}>
-									{local.specialties.join(", ")}
-								</Text>
+								<Text style={styles.all}>{local.specialties.join(", ")}</Text>
 								<Text style={styles.all}>{local.phone}</Text>
 							</View>
 						</Callout>
@@ -188,17 +182,14 @@ export default ({ navigation }) => {
 			<View style={styles.searchForm}>
 				<TextInput
 					style={styles.searchInput}
-					placeholder={"Buscar local por especialidade"}
+					placeholder={"Deseja buscar por qual comida?"}
 					placeholderTextColor={"#999"}
 					autoCapitalize="words"
 					autoCorrect={false}
 					value={specialties}
 					onChangeText={setSpecialties}
 				/>
-				<TouchableOpacity
-					onPress={loadLocals}
-					style={styles.loadButton}
-				>
+				<TouchableOpacity onPress={loadLocals} style={styles.loadButton}>
 					<MaterialIcons name="my-location" size={20} color="#fff" />
 				</TouchableOpacity>
 			</View>

@@ -10,6 +10,9 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ## :computer: Projeto
 
 O TOUR é um projeto que visa conectar lanchonetes, restaurantes e bares com clientes por meio da localidade, em um raio de 20km.
+<p align="center">
+  <img src="img/home.png">
+</p>
 
 ## :mortar_board: Quem ministrou?
 
