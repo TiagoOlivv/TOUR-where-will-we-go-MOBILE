@@ -1,5 +1,5 @@
 # Semana OmniStack 10.0 da Rocketseat :rocket:
-# TOUR-where-will-we-go-MOBILE
+## TOUR- where will we go - MOBILE
 Aplicação mobile desenvolvida com auxilio da Rocketseat na 10ª semana omnistack 
 
 ## :rocket: Tecnologias usadas
