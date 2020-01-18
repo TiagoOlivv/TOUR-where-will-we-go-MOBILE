@@ -7,14 +7,17 @@ import {
 	TextInput,
 	TouchableOpacity
 } from "react-native";
+
 import MapView, { Marker, Callout } from "react-native-maps";
 import {
 	requestPermissionsAsync,
 	getCurrentPositionAsync
 } from "expo-location";
+
 import { MaterialIcons } from "@expo/vector-icons";
 
 import api from "../services/api";
+import { connect, disconnect, subscribeToNewLocals } from "../services/socket";
 
 const styles = StyleSheet.create({
 	map: {
@@ -105,6 +108,18 @@ export default ({ navigation }) => {
 		loalInitialPosition();
 	}, []);
 
+	useEffect(() => {
+		subscribeToNewLocals(local => setLocals([...locals, local]));
+	}, [locals]);
+
+	function setupWebSocket() {
+		disconnect();
+
+		const { latitude, longitude } = currentRegion;
+
+		connect(latitude, longitude, specialties);
+	}
+
 	async function loadLocals() {
 		const { latitude, longitude } = currentRegion;
 
@@ -113,6 +128,7 @@ export default ({ navigation }) => {
 		});
 
 		setLocals(response.data.locals);
+		setupWebSocket();
 	}
 
 	function handleRegionChange(region) {
