@@ -1,6 +1,6 @@
 import socketio from "socket.io-client";
 
-const socket = socketio("http://10.0.0.103:3333", { autoConnect: false });
+const socket = socketio("http://192.168.1.106:3333", { autoConnect: false });
 
 function subscribeToNewLocals(subscribeFunction) {
 	socket.on("new-local", subscribeFunction);

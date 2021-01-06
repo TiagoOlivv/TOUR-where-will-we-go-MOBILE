@@ -2,9 +2,6 @@
 	"expo": {
 		"name": "TUR",
 		"slug": "TUR",
-		"privacy": "public",
-		"sdkVersion": "36.0.0",
-		"platforms": ["ios", "android", "web"],
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
@@ -19,6 +16,15 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#FFFFFF"
+			}
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
 		}
 	}
 }

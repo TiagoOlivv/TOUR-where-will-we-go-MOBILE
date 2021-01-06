@@ -10,15 +10,15 @@ const Routes = createAppContainer(
 			Main: {
 				screen: Main,
 				navigationOptions: {
-					title: "TOUR"
-				}
+					title: "TOUR",
+				},
 			},
 			Profile: {
 				screen: Profile,
 				navigationOptions: {
-					title: "INSTAGRAM"
-				}
-			}
+					title: "INSTAGRAM",
+				},
+			},
 		},
 		{
 			defaultNavigationOptions: {
@@ -27,9 +27,9 @@ const Routes = createAppContainer(
 				headerBackTitleVisible: false,
 				headerTintColor: "#fff",
 				headerStyle: {
-					backgroundColor: "#0078FF"
-				}
-			}
+					backgroundColor: "#0078FF",
+				},
+			},
 		}
 	)
 );
